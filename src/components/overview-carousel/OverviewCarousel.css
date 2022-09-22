@@ -1,6 +1,16 @@
 .container {
   display: block;
+  position: relative;
   height: 50vw;
+}
+
+.container__flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1600px;
+  margin: auto;
+  padding: 2rem 2rem;
 }
 
 p {
@@ -29,4 +39,10 @@ h3 {
 
 .button {
   margin: 1.5rem 0 !important;
+}
+
+.carousel__image {
+  aspect-ratio: 1/1;
+  width: 20rem;
+  height: 20rem;
 }

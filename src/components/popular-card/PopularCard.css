@@ -1,0 +1,26 @@
+.popular__card__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: aliceblue;
+  height: 16rem;
+  width: 36rem;
+  border-radius: 1rem;
+}
+
+.popular__card__image__container {
+  width: 10rem;
+  height: 10rem;
+  background-color: red;
+  margin: 1rem;
+}
+
+.popular__card__image__container__circle {
+}
+
+.popular__card__info__container {
+  width: 5rem;
+  height: 5rem;
+  background-color: aqua;
+  margin: 1rem;
+}

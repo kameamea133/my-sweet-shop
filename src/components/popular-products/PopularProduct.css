@@ -1,0 +1,13 @@
+.popular__products__container {
+  background-color: red;
+  height: 25vh;
+}
+
+.popular__products__container h3 {
+  margin: 0;
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.popular__products__banner {
+}
