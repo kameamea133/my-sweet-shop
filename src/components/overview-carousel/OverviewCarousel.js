@@ -1,8 +1,8 @@
 import React from "react";
 import "./OverviewCarousel.css";
-import theme from "../../helper/theme";
 import { colors } from "../../helper/theme";
-import ArrowButton from "./arrow-button/ArrowButton";
+import ArrowButton from "../arrow-button/ArrowButton";
+import VerticalCarouselNumber from "../vertical-carousel-number/VerticalCarouselNumber";
 
 export default function OverviewCarousel({ imagesArray, interval = 1500 }) {
   const [slideNumber, setSlideNumber] = React.useState(0);
@@ -26,13 +26,20 @@ export default function OverviewCarousel({ imagesArray, interval = 1500 }) {
 
   return (
     <div className="container" style={{ backgroundColor: colors.primary }}>
-      <p>organic products</p>
-      <h1>Your Sweets</h1>
-      <div className="line"></div>
-      <h2>
-        donus, ice cream, <span>macaroons, </span> cheskey
-      </h2>
-      <ArrowButton text="our production" />
+      <VerticalCarouselNumber
+        slideArray={imagesArray}
+        slideIndex={slideNumber}
+      />
+      <p style={{ color: colors.third }}>organic products</p>
+      <h1 style={{ color: colors.white }}>
+        Your <span style={{ color: colors.third }}>Sweets</span>
+      </h1>
+      <div className="line" style={{ backgroundColor: colors.third }}></div>
+      <h2 style={{ color: colors.white }}>donuts, ice cream,</h2>
+      <h3 style={{ color: colors.white }}>
+        <span style={{ color: colors.third }}>macaroons, </span> cheskey
+      </h3>
+      <ArrowButton text="our production" className="button" />
 
       {/* <img src={imagesArray[slideNumber]} alt="img" /> */}
     </div>

@@ -1,15 +1,17 @@
 import React from "react";
 import "./ArrowButton.css";
-import { colors } from "../../../helper/theme";
+import { colors } from "../../helper/theme";
 import { Button } from "@mui/material";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
-export default function ArrowButton({ text }) {
+export default function ArrowButton({ text, className }) {
   return (
     <Button
+      className={`${className}`}
       variant="contained"
       color="secondary"
-      style={{
+      size="large"
+      sx={{
         textTransform: "lowercase",
         borderRadius: "30px",
         padding: "4px 6px",

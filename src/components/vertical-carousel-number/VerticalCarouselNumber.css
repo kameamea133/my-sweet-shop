@@ -1,0 +1,35 @@
+.index__layout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 3.5rem;
+}
+
+.point {
+  display: block;
+  width: 2rem;
+  transform: translateY(10%);
+}
+
+.selected {
+  margin-top: 0.2rem;
+}
+
+.not__selected {
+  display: block;
+  width: 0.4rem;
+  height: 0.9rem;
+  margin: auto !important;
+}
+
+.point svg {
+  width: 100% !important;
+  height: 100%;
+}
+
+.point__number {
+  font-size: large;
+}
+
+.circle__icon {
+}

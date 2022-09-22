@@ -1,5 +1,32 @@
 .container {
   display: block;
   height: 50vw;
-  /* background: blue; */
+}
+
+p {
+  font-weight: 700;
+}
+
+.line {
+  height: 0.4rem;
+  width: 6rem;
+  border-radius: 1rem;
+}
+
+h1 {
+  font-size: 4rem;
+  margin: 1rem 0;
+}
+
+h2 {
+  font-size: 3rem;
+  margin: 0.8rem 0;
+}
+
+h3 {
+  font-size: 2.7rem;
+}
+
+.button {
+  margin: 1.5rem 0 !important;
 }
