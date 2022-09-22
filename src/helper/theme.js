@@ -28,6 +28,12 @@ const theme = createTheme({
       dark: colors.third,
       contrastText: colors.white,
     },
+    white: {
+      light: colors.white,
+      main: colors.white,
+      dark: colors.white,
+      contrastText: colors.white,
+    },
   },
 });
 
