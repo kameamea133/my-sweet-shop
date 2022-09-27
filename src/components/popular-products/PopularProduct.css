@@ -1,6 +1,5 @@
 .popular__products__container {
-  background-color: red;
-  height: 25vh;
+  height: 26vh;
 }
 
 .popular__products__container h3 {
@@ -10,4 +9,8 @@
 }
 
 .popular__products__banner {
+}
+
+.popular__product__popular__card {
+  margin-top: 5rem;
 }
