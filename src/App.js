@@ -1,9 +1,15 @@
 import './App.css';
+import React from 'react'
+import Header from './components/header'
+import PaiementCb from './components/paiementcb';
 
 function App() {
   return (
     <div className="App">
-     <h1>Macha/JuJu/Lianenko/Kamea's Project</h1>
+     
+     <Header />
+     <PaiementCb />
+     
     </div>
   );
 }
