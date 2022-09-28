@@ -1,14 +1,14 @@
-h2 {
+.info-cb h2 {
     font-family: 'Noto Sans', sans-serif;    
     color: white;
 }
 
-span, h3{
+.info-cb span, h3{
     color: rgb(21, 20, 20);
     font-family: 'Noto Sans', sans-serif;
 }
 
-input {
+.cb-form input {
     background-color: transparent;
     height: 35px;    
     border: 1px solid white;

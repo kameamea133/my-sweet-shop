@@ -10,11 +10,9 @@ function Header() {
   return (
     <div className="header">
         <div className='titre'>
-            <div>
-                <h1>My Sw<span>ee</span>ts                 
-                    
-                </h1>
-            </div>
+            
+                <h1>My Sw<span>ee</span>ts</h1>
+            
         </div>
         
         <nav>

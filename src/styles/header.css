@@ -1,16 +1,15 @@
-h1 {
+.titre h1 {
     font-family: 'Noto Sans', sans-serif;
     font-size: 45px;
     color: black;
   }
   
   
-  h1 span {
-    height: 15px;
-    width: 15px;
+  .titre span {
+    
     background-color: #ed708e;
     color: white;
-    border-radius: 255px;
+    border-radius: 30px;
   }
   
   .header {

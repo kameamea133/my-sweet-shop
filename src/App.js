@@ -8,11 +8,10 @@ import PaiementCb from './components/paiementcb';
 function App() {
   return (
     <div className="App">
-     <Section1 />
-     <Section2 />
-     
-     <Header />
-     <PaiementCb />
+    <Header />
+    <Section1 />
+    <Section2 />       
+    <PaiementCb />
      
     </div>
   );
