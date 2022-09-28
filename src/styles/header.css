@@ -1,0 +1,79 @@
+h1 {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 45px;
+    color: black;
+  }
+  
+  
+  h1 span {
+    height: 15px;
+    width: 15px;
+    background-color: #ed708e;
+    color: white;
+    border-radius: 255px;
+  }
+  
+  .header {
+    display: flex;
+    width: 100vw;
+    height: 15vh;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid white;
+    background-color: #5cc9f0;
+  }
+  
+  .titre {
+    display: flex;
+    width: 33vw;
+    justify-content: center;
+  }
+  
+  .nav-item {
+    display: flex;
+    width: 33vw;
+    justify-content: space-evenly;
+    list-style-type: none;
+    font-family: 'Roboto';
+    font-size: 25px;
+    font-weight: 500;
+    color: white;
+    opacity: 0.9;
+  
+  }
+  
+  .panier {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 33vw;
+    height: 15vh;
+    
+    
+  }
+  
+  .decor-panier {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;  
+    background-color: #ed708e;
+    height: 10vh;
+    width: 60px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    
+  }
+  
+  .nav-item li:hover{
+    opacity: 1;
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out
+  }
+  
+  .icone-panier:hover {
+    
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out
+  
+  }
+  
