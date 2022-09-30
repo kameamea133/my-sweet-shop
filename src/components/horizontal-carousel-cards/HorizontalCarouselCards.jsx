@@ -13,10 +13,11 @@ function HorizontalCarouselCards({ popularProducts, currentSlideIndex }) {
       : "";
   return (
     <div className="horizontal__carousel__cards__popular__carousel__all_cards">
-      {popularProducts.map((it) => (
+      {popularProducts.map((product) => (
         <PopularCard
-          productDetail={it}
+          productDetail={product}
           className={`horizontal__carousel__cards__popular__carousel__card ${transitionClass}`}
+          key={product.id}
         />
       ))}
     </div>

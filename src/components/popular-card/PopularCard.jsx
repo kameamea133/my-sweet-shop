@@ -10,9 +10,9 @@ export default function PopularCard({ className, productDetail }) {
   const stars = [];
   for (let i = 1; i <= 5; i++) {
     if (i <= productDetail.stars) {
-      stars.push(<StarRateIcon sx={{ color: colors.secondary }} />);
+      stars.push(<StarRateIcon sx={{ color: colors.secondary }} key={i} />);
     } else {
-      stars.push(<StarRateIcon sx={{ color: colors.third }} />);
+      stars.push(<StarRateIcon sx={{ color: colors.third }} key={i} />);
     }
   }
   return (

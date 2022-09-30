@@ -5,6 +5,7 @@ import PopularCarousel from "../popular-carousel/PopularCarousel";
 
 const DUMMY_PRODUCTS = [
   {
+    id: 1,
     name: "Ice Cream",
     flavour: "Vannilla",
     subtitle: "Black Flovers",
@@ -15,6 +16,7 @@ const DUMMY_PRODUCTS = [
       "https://i.pinimg.com/originals/ef/56/3c/ef563c7f99ce5bff4e01a45d24e13ac6.png",
   },
   {
+    id: 2,
     name: "Ice Cream",
     flavour: "Chocolat",
     subtitle: "Black Flovers",
@@ -25,6 +27,7 @@ const DUMMY_PRODUCTS = [
       "https://i.pinimg.com/originals/ef/56/3c/ef563c7f99ce5bff4e01a45d24e13ac6.png",
   },
   {
+    id: 3,
     name: "Ice Cream",
     flavour: "Mango",
     subtitle: "Black Flovers",
@@ -38,15 +41,17 @@ const DUMMY_PRODUCTS = [
 
 export default function PopularProduct() {
   return (
-    <div
-      className="popular__products__container"
-      style={{ backgroundColor: colors.secondary }}
-    >
-      <div className="popular__products__banner"></div>
-      <h3 style={{ color: colors.white }}>
-        Popular <span style={{ color: colors.third }}>Products</span>
-      </h3>
+    <>
+      <div className="popular__products__banner">
+        <h3 style={{ color: colors.white }}>
+          Popular <span style={{ color: colors.third }}>Products</span>
+        </h3>
+        <div
+          className="popular__products__banner__background"
+          style={{ backgroundColor: colors.secondary }}
+        ></div>
+      </div>
       <PopularCarousel popularProducts={DUMMY_PRODUCTS} interval={1500} />
-    </div>
+    </>
   );
 }

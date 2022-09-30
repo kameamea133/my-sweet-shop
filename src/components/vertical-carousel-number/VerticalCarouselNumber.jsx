@@ -26,7 +26,7 @@ export default function VerticalCarouselNumber({ slideArray, slideIndex }) {
             ? "0" + numberStartAtOne.toString()
             : numberStartAtOne;
         return (
-          <div className="index__layout">
+          <div className="index__layout" key={index}>
             {index === slideIndex ? currentStyle : notCurrentStyle}
             <p className="point__number" style={{ color: colors.white }}>
               {index === slideIndex && numberToDisplay}

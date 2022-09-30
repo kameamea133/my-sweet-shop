@@ -1,16 +1,19 @@
-.popular__products__container {
-  height: 26vh;
-}
-
-.popular__products__container h3 {
+.popular__products__banner h3 {
   margin: 0;
   text-align: center;
   padding-top: 2rem;
 }
 
 .popular__products__banner {
+  position: relative;
+  height: 12vh;
 }
 
-.popular__product__popular__card {
-  margin-top: 5rem;
+.popular__products__banner__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 25vh;
+  z-index: -1;
 }

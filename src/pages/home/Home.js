@@ -1,6 +1,10 @@
 import React from "react";
 import OverviewCarousel from "../../components/overview-carousel/OverviewCarousel.js";
 import PopularProduct from "../../components/popular-products/PopularProduct.jsx";
+import Section1 from "../../components/Section1";
+import Section2 from "../../components/Section2";
+import Header from "../../components/header";
+import PaiementCb from "../../components/paiementcb";
 
 const DUMMY_IMAGES = [
   "https://assets.rpgsite.net/images/images/000/117/434/original/Harvestella_Strawberry-Shortcake.png",
@@ -12,9 +16,13 @@ const DUMMY_IMAGES = [
 
 export default function Home() {
   return (
-    <>
+    <div className="home">
+      <Header />
       <OverviewCarousel imagesArray={DUMMY_IMAGES} />
+      <Section1 />
+      <Section2 />
       <PopularProduct />
-    </>
+      <PaiementCb />
+    </div>
   );
 }

@@ -21,9 +21,11 @@ export default function HorizontalCarouselNumber({
   return (
     <div className="horizontal__carousel__number__index__layout">
       {slideArray.map((_, index) => {
-        return index === currentSlideIndex
-          ? itemSelectedStyle
-          : itemNotSelectedStyle;
+        return index === currentSlideIndex ? (
+          <div key={index}>{itemSelectedStyle}</div>
+        ) : (
+          <div key={index}>{itemNotSelectedStyle}</div>
+        );
       })}
     </div>
   );
