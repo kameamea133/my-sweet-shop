@@ -1,15 +1,36 @@
 import React from "react";
-import PopularCard from "../popular-card/PopularCard";
 import "./PopularCarousel.css";
+import HorizontalCarouselNumber from "../horizontal-carousel-number/HorizontalCarouselNumber";
+import HorizontalCarouselCards from "../horizontal-carousel-cards/HorizontalCarouselCards";
 
-export default function PopularCarousel({ popularProducts }) {
+export default function PopularCarousel({ popularProducts, interval }) {
+  const threePopularProduct = popularProducts.slice(0, 3);
+  const [indexCardToShow, setIndexCardToShow] = React.useState(0);
+  React.useEffect(() => {
+    const intervalId = setInterval(() => {
+      setIndexCardToShow((prevState) => {
+        if (prevState < 2) {
+          return prevState + 1;
+        } else {
+          return 0;
+        }
+      });
+    }, interval);
+
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, []);
   return (
-    <div className="popular__carousel__container">
-      <div className="popular__carousel__all_cards">
-        {popularProducts.map((it) => (
-          <PopularCard productDetail={it} className="popular__carousel__card" />
-        ))}
-      </div>
-    </div>
+    <>
+      <HorizontalCarouselCards
+        popularProducts={threePopularProduct}
+        currentSlideIndex={indexCardToShow}
+      />
+      <HorizontalCarouselNumber
+        slideArray={threePopularProduct}
+        currentSlideIndex={indexCardToShow}
+      />
+    </>
   );
 }

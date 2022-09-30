@@ -1,0 +1,27 @@
+.horizontal__carousel__cards__popular__carousel__all_cards {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin-top: 3rem;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  padding: 20px;
+}
+.horizontal__carousel__cards__popular__carousel__all_cards::-webkit-scrollbar {
+  display: none;
+}
+
+.go__one__left {
+  transform: translateX(-0%);
+  transition: all 1s ease;
+}
+
+.go__two__left {
+  transform: translateX(-120%);
+  transition: all 1s ease;
+}
+
+.go__all__right {
+  transform: translateX(120%);
+  transition: all 1s ease;
+}

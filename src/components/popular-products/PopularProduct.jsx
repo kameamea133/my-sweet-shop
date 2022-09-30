@@ -1,7 +1,6 @@
 import React from "react";
 import "./PopularProduct.css";
 import { colors } from "../../helper/theme";
-import PopularCard from "../popular-card/PopularCard";
 import PopularCarousel from "../popular-carousel/PopularCarousel";
 
 const DUMMY_PRODUCTS = [
@@ -48,7 +47,7 @@ export default function PopularProduct() {
         Popular <span style={{ color: colors.third }}>Products</span>
       </h3>
       {/* <PopularCard className="popular__product__popular__card" /> */}
-      <PopularCarousel popularProducts={DUMMY_PRODUCTS} />
+      <PopularCarousel popularProducts={DUMMY_PRODUCTS} interval={1500} />
     </div>
   );
 }

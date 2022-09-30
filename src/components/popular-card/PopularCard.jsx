@@ -28,7 +28,7 @@ export default function PopularCard({ className, productDetail }) {
     }
   }
   return (
-    <div className={``}>
+    <div>
       <Card
         className={`popular__card__container ${className}`}
         variant="outlined"
@@ -38,7 +38,7 @@ export default function PopularCard({ className, productDetail }) {
             className="popular__card__image__container__circle"
             style={{ backgroundColor: colors.primary }}
           ></div>
-          <img src={productDetail.image} />
+          <img src={productDetail.image} alt={productDetail.name} />
         </div>
         <div className="popular__card__info__container">
           <h4 style={{ color: colors.primary }}>
