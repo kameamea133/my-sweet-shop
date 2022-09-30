@@ -1,5 +1,4 @@
 import React from "react";
-import "./PopularCarousel.css";
 import HorizontalCarouselNumber from "../horizontal-carousel-number/HorizontalCarouselNumber";
 import HorizontalCarouselCards from "../horizontal-carousel-cards/HorizontalCarouselCards";
 

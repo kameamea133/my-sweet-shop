@@ -16,7 +16,7 @@ function HorizontalCarouselCards({ popularProducts, currentSlideIndex }) {
       {popularProducts.map((it) => (
         <PopularCard
           productDetail={it}
-          className={`popular__carousel__card go__left ${transitionClass}`}
+          className={`horizontal__carousel__cards__popular__carousel__card ${transitionClass}`}
         />
       ))}
     </div>

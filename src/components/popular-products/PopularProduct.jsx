@@ -16,7 +16,7 @@ const DUMMY_PRODUCTS = [
   },
   {
     name: "Ice Cream",
-    flavour: "Vannilla",
+    flavour: "Chocolat",
     subtitle: "Black Flovers",
     category: "ice cream",
     stars: 5,
@@ -26,7 +26,7 @@ const DUMMY_PRODUCTS = [
   },
   {
     name: "Ice Cream",
-    flavour: "Vannilla",
+    flavour: "Mango",
     subtitle: "Black Flovers",
     category: "ice cream",
     stars: 1,
@@ -46,7 +46,6 @@ export default function PopularProduct() {
       <h3 style={{ color: colors.white }}>
         Popular <span style={{ color: colors.third }}>Products</span>
       </h3>
-      {/* <PopularCard className="popular__product__popular__card" /> */}
       <PopularCarousel popularProducts={DUMMY_PRODUCTS} interval={1500} />
     </div>
   );

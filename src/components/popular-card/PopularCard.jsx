@@ -6,19 +6,7 @@ import StarRateIcon from "@mui/icons-material/StarRate";
 import AttachMoneyRoundedIcon from "@mui/icons-material/AttachMoneyRounded";
 import ShopButton from "../shop-button/ShopButton";
 
-const DUMMY_PRODUCT = {
-  name: "Ice Cream",
-  flavour: "Vannilla",
-  subtitle: "Black Flovers",
-  category: "ice cream",
-  stars: 4,
-  price: 6.84,
-  image:
-    "https://i.pinimg.com/originals/ef/56/3c/ef563c7f99ce5bff4e01a45d24e13ac6.png",
-};
-
 export default function PopularCard({ className, productDetail }) {
-  productDetail = DUMMY_PRODUCT;
   const stars = [];
   for (let i = 1; i <= 5; i++) {
     if (i <= productDetail.stars) {
