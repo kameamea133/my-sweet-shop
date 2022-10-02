@@ -1,0 +1,77 @@
+.popular__card__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  height: 16rem;
+  width: 36rem;
+  border-radius: 1rem;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.popular__card__image__container {
+  position: relative;
+  width: 14rem;
+  height: 14rem;
+  margin: 0.6rem;
+  background-color: transparent !important;
+  border: none !important;
+}
+
+.popular__card__image__container__circle {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: auto;
+  width: 80%;
+  height: 80%;
+  background-color: rgb(38, 100, 158);
+  border-radius: 50%;
+}
+
+.popular__card__image__container img {
+  position: absolute;
+  object-fit: contain;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+/*          Info produit      */
+.popular__card__info__container {
+  width: 33%;
+  margin: 0.6rem;
+}
+
+.popular__card__info__container h4 {
+  font-size: 1.2rem;
+}
+
+.popular__card__info__container__subtitle {
+  color: lightslategray;
+  font-weight: 500;
+  margin: 0.4rem 0;
+}
+
+.popular__card__info__container__stars {
+  margin: 0.4rem 0;
+}
+
+.popular__card__info__container__price {
+  display: flex;
+  align-items: flex-end;
+  margin: 0.2rem 0;
+}
+
+.popular__card__info__container__price__dollar {
+  transform: scale(0.8);
+}
+
+.popular__card__info__container__price__number {
+  font-size: 1.6rem;
+}
+
+.popular__card__info__container__shop__button {
+  margin-top: 0.6rem !important;
+}
