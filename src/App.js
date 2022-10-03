@@ -1,9 +1,17 @@
 import './App.css';
+import Footer from './components/Footer/Footer.js';
+import Reviews from './components/Reviews/Reviews.js';
+
 
 function App() {
   return (
+    <div>
     <div className="App">
-     <h1>Macha/JuJu/Lianenko/Kamea's Project</h1>
+
+    </div>
+    
+    <Reviews />
+    <Footer />
     </div>
   );
 }

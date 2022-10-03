@@ -1,0 +1,66 @@
+.img{
+    padding-left: 30px;
+}
+
+.review-p{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.row-rewiews{
+    display:flex;
+    
+    flex-direction: row;
+    justify-content:space-around;
+    background-color: #5FD3FB;
+    padding : 30px 30px;
+
+}
+
+.title-reviews{
+  
+}
+
+.arrow-back{
+    color:white;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.arrow-forward {
+    color:white;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.arrow-forward a:hover{
+    color:rgb(102, 20, 20);
+
+}
+
+.carroussel-reviews{
+    width : 350px;
+    
+    position:sticky;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.card-reviews{
+    width : 350px;
+}
+.card {
+    width : 350px;
+    transition-duration: 1s ease;
+    opacity: 0;
+}
+  
+.card-active {
+    width : 350px;
+    transform: scale(1.08);
+    transition-duration: 1s ;
+    opacity: 1;
+    
+}
+  

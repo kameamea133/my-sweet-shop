@@ -1,0 +1,15 @@
+.grid-products{
+    color:black;
+    background-color: #FFFFFF;
+    font-size: 10px;
+}
+
+.sweet-rating{
+    color:#ed708e;
+}
+
+.btn-add-to-cart{
+    color:#ed708e;
+    text-transform: lowercase;
+    border-color:#ed708e;
+}
