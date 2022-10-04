@@ -1,8 +1,5 @@
-import React , {useState} from 'react';
-
-
-import ArrowCircleRightOutlinedIcon from '@mui/icons-material/ArrowCircleRightOutlined';
-import ArrowCircleLeftOutlinedIcon from '@mui/icons-material/ArrowCircleLeftOutlined';
+import React from 'react';
+import Carousel from 'react-material-ui-carousel'
 
 
 import './Reviews.css';
@@ -30,44 +27,32 @@ const reviews = [
 ]
 
 export default function Reviews(){
-    const [index, setIndex] = useState(1)
 
-    function previousReview(){
-      setIndex(prevIndex => (prevIndex - 1) % reviews.length)
-    }
-
-    function nextReview(){
-      setIndex(prevIndex => (prevIndex + 1) % reviews.length)      
-    }
-
-  
     return (
       <div className="row-rewiews">
-          <div className="title-reviews">
-             <h2>Customer reviews</h2> 
-            <ArrowCircleLeftOutlinedIcon onClick={previousReview} className="arrow-back" />{index}
-            <ArrowCircleRightOutlinedIcon onClick={nextReview} className="arrow-forward" />
-          </div>
-          
         
-          <div className="carroussel-reviews">
-
-          {reviews.map((item, i) => {
         
-          return (
-            <div className={ (i === index) ? 'card-active' : 'card'} key={item.id}>
-              <CardReview
-                review={item}
-              />
+            <div className="title-reviews">
+              <h2>Customer reviews</h2>
             </div>
-          );
-        })}
-        </div>
+            
           
+            <div className="carroussel-reviews">
+            <Carousel 
+                height="200px" 
+                autoPlay={false} 
+                navButtonsAlwaysVisible={false} 
+                indicators={true}>
 
-         
+                {reviews.map((item, i) => {
+                  return (
+                    <CardReview review={item} key={item.id} /> 
+                  );
+                })}
+            </Carousel>
           
-       
+            </div>
+           
     </div>
       
     );

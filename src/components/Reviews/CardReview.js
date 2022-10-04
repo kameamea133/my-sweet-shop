@@ -16,7 +16,7 @@ export default function CardReview({review}){
     
     
     return (
-            <Card className="card-reviews"> 
+            <Card> 
                 <CardHeader
                   avatar={
                     <Avatar aria-label="recipe">
