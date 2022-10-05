@@ -15,16 +15,22 @@ const DUMMY_IMAGES = [
   "https://cdn131.picsart.com/322349642117211.png",
 ];
 
+
+
 export default function Home() {
   return (
-    <div className="home">
-      <Header />
-      <OverviewCarousel imagesArray={DUMMY_IMAGES} />
-      <Section1 />
-      <Section2 />
-      <PopularProduct />
-      <Panier />
+
+    
+      <div className="home">
       
-    </div>
+        <Header />
+        <OverviewCarousel imagesArray={DUMMY_IMAGES} />
+        <Section1 />
+        <Section2 />
+        <PopularProduct />        
+        <Panier />
+        
+      </div>
+    
   );
 }

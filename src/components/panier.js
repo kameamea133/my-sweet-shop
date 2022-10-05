@@ -1,15 +1,16 @@
 import React from "react";
 import PaiementCb from "./paiementcb";
 import { useState, useEffect } from "react";
-import { DUMMY_IMAGES } from "../data/dummyImage";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus, faMinus, faXmark } from "@fortawesome/free-solid-svg-icons";
+//import { usePanier } from '../context/contextPanier'
 import "../styles/panier.css";
 
 export default function Panier() {
-  const [products, setProducts] = useState([]);
-  const [sumCommande, setSumCommande] = useState(0);
-  const [totalPanier, setTotalPanier] = useState([])
+
+  const [products, setProducts] = useState([]);  
+
+  //const [state, dispatch] = usePanier()
 
   useEffect(() => {
     async function loadProducts() {
@@ -25,16 +26,18 @@ export default function Panier() {
     loadProducts();
   }, []);
 
+ 
+
   function sumPanier(total) {
-    //setTotalPanier(arr => [...arr, total])
+    console.log(total)
+    //dispatch({type: 'add', total: total})
     
   }
-
-  
+ 
 
   return (
     <div>
-      <PaiementCb totalPrice={sumCommande} />
+      <PaiementCb />
       <h2>Today Menu</h2>
       {products.map((el, i) => (
         <PanierCard
@@ -68,8 +71,6 @@ function majPanier(change) {
 }
 
 totalPrix(total)
-
-
 
   return (
     <div className="panier-card">
