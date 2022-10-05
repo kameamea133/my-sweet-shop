@@ -1,0 +1,37 @@
+.panier-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    height: 200px;
+    width: 70vw;
+    
+}
+
+.panier-produit img{
+    height: 200px;
+    width: 200px;
+}
+
+.panier-produit {
+    display: flex;
+    width: 40vw;
+    flex-direction: row;
+    align-items: center;
+}
+
+.panier-quantite {
+    width: 20vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+
+.panier-total {
+    width: 25vw;
+    display: flex;    
+    align-items: center;
+    justify-content: space-evenly;
+}
