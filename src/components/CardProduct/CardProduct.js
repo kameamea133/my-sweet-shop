@@ -35,9 +35,10 @@ export default function CardProduct(){
                 component="img"
                 image={img}
                 alt="produit"
+                sx={{height:"90px", width:"90px"}}
                 />
                 <CardContent>
-                    <Typography variant="body2" color="text.secondary">
+                    <Typography variant="body2" color="text.secondary" sx={{fontWeight:"bold"}}>
                       Macarons Macaron For Him Gift Box
                     </Typography>
                     <Typography variant="body2" color="text.secondary">

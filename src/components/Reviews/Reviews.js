@@ -33,13 +33,13 @@ export default function Reviews(){
         
         
             <div className="title-reviews">
-              <h2>Customer reviews</h2>
+              <h2>Customer<br /><span className="white-title">reviews</span></h2>
             </div>
             
           
             <div className="carroussel-reviews">
             <Carousel 
-                height="200px" 
+                height="180px" 
                 autoPlay={false} 
                 navButtonsAlwaysVisible={false} 
                 indicators={true}>

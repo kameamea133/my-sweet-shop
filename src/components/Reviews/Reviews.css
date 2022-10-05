@@ -1,14 +1,18 @@
 .row-rewiews{
     display:flex;
-    height : 500px;
     flex-direction: row;
     justify-content:space-around;
+    background-color: #5FD3FB;
     padding : 30px 30px;
+    height : 250px;
 }
 .title-reviews{
 
 }
 
+white-title{
+    color:white;
+}
 
 .carroussel-reviews{
     width : 600px;
