@@ -8,7 +8,7 @@ import {
   faCcVisa,
 } from "@fortawesome/free-brands-svg-icons";
 
-function PaiementCb() {
+function PaiementCb({total}) {
   const {
     register,
     handleSubmit,
@@ -67,7 +67,7 @@ function PaiementCb() {
               />
             </div>
             <div className="total">
-              <p>Total: 140 €</p>
+              <p>Total: {total} €</p>
               <button className="submit-btn" type="submit">
                 Go
               </button>
