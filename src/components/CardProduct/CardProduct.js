@@ -2,6 +2,7 @@ import React from 'react';
 
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
+import Box from '@mui/material/Box';
 
 import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardMedia';
@@ -45,13 +46,13 @@ export default function CardProduct(){
                       Macarons
                     </Typography>
 
-                    
-                    <Rating className="sweet-rating" value="4" size="small" readOnly />
+                    <Box sx={{display:"flex" ,  alignItems:"center"}}>
 
-
-                    <Typography variant="body2" color="text.secondary">
-                      6,38 <span className="sweet-rating">€</span>
-                    </Typography>
+                      <Rating className="sweet-rating" value="4" size="small" readOnly />
+                      <Typography variant="body2" color="text.secondary">
+                        6,38 <span className="sweet-rating">€</span>
+                      </Typography>
+                    </Box>
                 </CardContent>
 
                 <CardActions>
@@ -61,7 +62,8 @@ export default function CardProduct(){
                       endIcon={<ShoppingBagIcon sx={{color:"#ed708e"}}/>} 
                       sx={{ borderRadius: "9999px",
                       textTransform: "lowercase",
-                      borderColor:"#ed708e" }} 
+                      borderColor:"#ed708e",
+                      textAlign : "center" }} 
                       >
                         <span className="btn-add-to-cart">add to cart</span>
                     </Button>

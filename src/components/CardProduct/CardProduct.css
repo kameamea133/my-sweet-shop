@@ -8,8 +8,13 @@
     color:#ed708e;
 }
 
+.MuiRating-icon{
+    color:#ed708e;
+}
+
 .btn-add-to-cart{
     color:#ed708e;
     text-transform: lowercase;
+    font-size: 8pt;
     border-color:#ed708e;
 }
