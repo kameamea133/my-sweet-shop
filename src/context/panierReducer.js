@@ -1,13 +1,14 @@
 const reducer = (state, action) => {
-    switch(action.type) {
-      case 'add':
-        const quantitePanier = action.panier.reduce((acc, val) => acc + val.quantite, 0)
+  switch (action.type) {
+    case "quantityCount":
+      const quantitePanier = action.panier.reduce(
+        (acc, val) => acc + val.quantite, 0);
         
-        return { totalQuantite: quantitePanier }
-        
-      default:
-        return state
-    }
-  }
+      return { totalQuantite: quantitePanier };
 
-export default reducer
+    default:
+      return state;
+  }
+};
+
+export default reducer;

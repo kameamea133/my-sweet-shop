@@ -1,16 +1,31 @@
+.panier-card-paiement {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100vw;
+
+}
+
 .panier-card {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    height: 200px;
+    height: 170px;
     width: 70vw;
-    
+    border: 1px solid rgb(163, 163, 163);
+    margin: 20px;
+    border-radius: 25px;
+    box-shadow: 7px 7px 12px rgb(163, 163, 163);
 }
 
-.panier-produit img{
-    height: 200px;
-    width: 200px;
+.panier-produit img {
+    height: 100px;
+    width: 100px;
+}
+
+.panier-produit p {
+    margin-left: 5%;
 }
 
 .panier-produit {
@@ -18,7 +33,10 @@
     width: 40vw;
     flex-direction: row;
     align-items: center;
+    margin-left: 2%;
 }
+
+
 
 .panier-quantite {
     width: 20vw;
@@ -26,12 +44,47 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    
+
 }
+
 
 .panier-total {
     width: 25vw;
-    display: flex;    
+    display: flex;
     align-items: center;
     justify-content: space-evenly;
 }
+
+.panier-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(237, 112, 142);
+    border: 2px solid rgb(237, 112, 142);
+    height: 40px;
+    width: 40px;
+    border-radius: 25px;
+}
+
+.panier-icons:hover {
+    color: white;
+    background-color: rgb(219, 86, 119);
+    border-color: rgb(219, 86, 119);
+    transform: scale(1.1);
+    transition: box-shadow, transform, 0.25s ease-out;
+    opacity: 0.9;
+    box-shadow: 2px 2px 7px rgb(163, 163, 163);
+}
+
+
+.panier-quantite::before,
+.panier-quantite::after,
+.panier-total::before{
+
+    content: '';
+    height: 60px;
+    width: 1px;
+    background-color: rgb(163, 163, 163);
+
+}
+

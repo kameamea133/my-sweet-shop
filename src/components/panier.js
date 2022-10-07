@@ -9,10 +9,12 @@ import PanierContext from "../context/contextPanier";
 import "../styles/panier.css";
 
 export default function Panier() {
+
   const [products, setProducts] = useState([]);
   const [listPanier, setListPanier] = useState([]);
-  const [montantTotal, setMontantTotal] = useState(0)
-  const [state , dispatch] = useContext(PanierContext);
+  const [montantTotal, setMontantTotal] = useState(0);
+
+  const [state, dispatch] = useContext(PanierContext);
 
   useEffect(() => {
     async function loadProducts() {
@@ -29,17 +31,14 @@ export default function Panier() {
   }, []);
 
   useEffect(() => {
-
-    dispatch({type: 'add', panier: listPanier})
+    dispatch({ type: "quantityCount", panier: listPanier });
     function calculMontant() {
-      return listPanier.reduce((acc, val) => acc + val.total,0)
+      return listPanier.reduce((acc, val) => acc + val.total, 0);
     }
-    setMontantTotal(calculMontant)
-
-  },[listPanier])
+    setMontantTotal(calculMontant);
+  }, [listPanier]);
 
   function checkPanier(items) {
-    
     const alreadyExist = listPanier.some((e) => e.title === items.title);
 
     if (alreadyExist) {
@@ -51,27 +50,31 @@ export default function Panier() {
         )
         .filter((obj) => obj.quantite !== 0);
       setListPanier(replace);
+      if (items.delete) {
+        const deleteProduct = products.filter((e) => e.title !== items.title);
+        setProducts(deleteProduct);
+      }
     } else {
       setListPanier([...listPanier, items]);
     }
-    
   }
 
-  
 
   return (
-    <div>
-      <PaiementCb total={montantTotal}/>
-      <h2>Today Menu</h2>
-      {products.map((el, i) => (
-        <PanierCard
-          title={el.title}
-          price={el.price}
-          image={el.images[0]}
-          totalPrix={checkPanier}
-          key={el.id}
-        />
-      ))}
+    <div className="panier-card-paiement">
+      <div>
+        <h2><span style={{color: '#5cc9f0'}}>Today's</span> Menu</h2>
+        {products.map((el, i) => (
+          <PanierCard
+            title={el.title}
+            price={el.price}
+            image={el.images[0]}
+            totalPrix={checkPanier}
+            key={el.id}
+          />
+        ))}
+      </div>
+      <PaiementCb total={montantTotal} />
     </div>
   );
 }
@@ -80,6 +83,7 @@ function PanierCard({ title, price, image, totalPrix }) {
   const [quantite, setQuantite] = useState(0);
   const [total, setTotal] = useState(0);
   const [isSelected, setIsSelected] = useState(false);
+  const [deleteProduct, setDeleteProduct] = useState(false);
 
   useEffect(() => {
     setTotal(price * quantite);
@@ -88,14 +92,21 @@ function PanierCard({ title, price, image, totalPrix }) {
 
   useEffect(() => {
     if (isSelected) {
-      totalPrix({ total: total, title: title, quantite: quantite });
+      totalPrix({
+        total: total,
+        title: title,
+        quantite: quantite,
+        delete: deleteProduct,
+      });
     }
-  }, [total]);
+  }, [total, deleteProduct]);
 
   quantite < 0 && setQuantite(0);
 
   function majPanier(change) {
-    change === "+" ? setQuantite(quantite + 1) : setQuantite(quantite - 1);
+    change === "+" && setQuantite(quantite + 1);
+    change === "-" && setQuantite(quantite - 1);
+    change === "delete" && setDeleteProduct(true);
   }
 
   return (
@@ -105,26 +116,40 @@ function PanierCard({ title, price, image, totalPrix }) {
         <p>{title}</p>
       </div>
       <div className="panier-quantite">
-        <FontAwesomeIcon
-          icon={faMinus}
-          onClick={() => {
-            majPanier("-");
-          }}
-        />
+        <div className="panier-icons">
+          <FontAwesomeIcon
+            icon={faMinus}
+            fontSize={20}
+            onClick={() => {
+              majPanier("-");
+            }}
+          />
+        </div>
         <p>{quantite}</p>
-        <FontAwesomeIcon
-          icon={faPlus}
-          onClick={() => {
-            majPanier("+");
-          }}
-        />
+        <div className="panier-icons">
+          <FontAwesomeIcon
+            icon={faPlus}
+            fontSize={20}
+            onClick={() => {
+              majPanier("+");
+            }}
+          />
+        </div>
       </div>
       <div>
         <p>{price}€</p>
       </div>
       <div className="panier-total">
         <p>Total : {total}€</p>
-        <FontAwesomeIcon icon={faXmark} />
+        <div className="panier-icons">
+          <FontAwesomeIcon
+            icon={faXmark}
+            fontSize={20}
+            onClick={() => {
+              majPanier("delete");
+            }}
+          />
+        </div>
       </div>
     </div>
   );
