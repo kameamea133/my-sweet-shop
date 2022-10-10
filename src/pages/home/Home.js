@@ -5,7 +5,7 @@ import Section1 from "../../components/Section1";
 import Section2 from "../../components/Section2";
 import Header from "../../components/header";
 import PaiementCb from "../../components/paiementcb";
-
+import Filter from "../../components/Filter.js";
 const DUMMY_IMAGES = [
   "https://assets.rpgsite.net/images/images/000/117/434/original/Harvestella_Strawberry-Shortcake.png",
   "https://www.clipartmax.com/png/full/249-2498606_strawberry-pie-food-anime-cake-illustration-strawberry-cake-pixiv.png",
@@ -21,6 +21,7 @@ export default function Home() {
       <OverviewCarousel imagesArray={DUMMY_IMAGES} />
       <Section1 />
       <Section2 />
+      <Filter />
       <PopularProduct />
       <PaiementCb />
     </div>
