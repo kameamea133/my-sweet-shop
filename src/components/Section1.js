@@ -25,15 +25,16 @@ const Section1 = () => {
           <h1><span>About</span> Us</h1>
           <div className='ourProduction-btn'>
             <h4>our production</h4>
-            <KeyboardArrowRightIcon style={{ backgroundColor: "#E0597A", borderRadius:"9999px", width: "35px", height:"36px", marginRight:"3px"}}/>
+            <KeyboardArrowRightIcon style={{ backgroundColor: "#E0597A", borderRadius:"9999px", width: "28px", height:"28px", marginRight:"3px", padding:"3px", marginTop:"4px"}}/>
           </div>
           
         </div>
         <hr style={{ backgroundColor: "black", width:"90px", height:"5px", borderRadius:"15px", marginLeft: "0", marginBottom: "25px"}}/>
         <div className='section1-rightBox-paragraph'>
           <div className='para-left'>
-            <p>Nulla eu nisl quis enim aliquam posuere vitae ac velit. Suspendisse dictum ligula sit amet fringilla tempor. Maecenas elementum urna eget risus gravida malesuada. Phasellus viverra interdum mollis. Nulla eu nisl quis enim aliquam posuere vitae ac velit. Suspendisse dictum ligula sit amet fringilla tempor.</p>
-            <p>Nulla eu nisl quis enim aliquam posuere vitae ac velit. Suspendisse dictum ligula sit amet fringilla tempor. Maecenas elementum urna eget risus gravida malesuada. Phasellus viverra interdum mollis. Suspendisse dictum ligula sit amet fringilla tempor. Maecenas elementum</p>
+            <p>Nulla eu nisl quis enim aliquam posuere vitae ac velit. Suspendisse dictum ligula sit amet fringilla tempor. Maecenas elementum urna eget risus gravida malesuada. Phasellus viverra interdum mollis. Nulla eu nisl quis enim aliquam posuere vitae ac velit.</p>
+            <br />
+            <p>Nulla eu nisl quis enim aliquam posuere vitae ac velit. Suspendisse dictum ligula sit amet fringilla tempor. Maecenas elementum urna eget risus gravida malesuada.</p>
 
           </div>
           <div className='para-right'>
