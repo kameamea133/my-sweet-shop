@@ -1,0 +1,19 @@
+.button-arrow {
+  position: relative;
+  width: 40px;
+  aspect-ratio: 1/1;
+  border-radius: 20px;
+  margin-left: 5px;
+}
+
+.text__btn {
+  margin: 0 16px;
+  font-weight: 600;
+}
+
+.right-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin: auto;
+}

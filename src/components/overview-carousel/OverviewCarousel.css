@@ -1,0 +1,55 @@
+.container {
+  display: block;
+  position: relative;
+  height: 60vh;
+  width: 100%;
+}
+
+.container__flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1600px;
+  margin: auto;
+  padding: 2rem 2rem;
+  max-height: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70rem;
+}
+
+.container-flex div p {
+  font-weight: 700;
+}
+
+.line {
+  height: 0.4rem;
+  width: 6rem;
+  border-radius: 1rem;
+}
+
+.container__flex div h1 {
+  font-size: 4rem;
+  margin: 1rem 0;
+}
+
+.container__flex div h2 {
+  font-size: 3rem;
+  margin: 0.8rem 0;
+}
+
+.container__flex div h3 {
+  font-size: 2.7rem;
+}
+
+.button {
+  margin: 1.5rem 0 !important;
+}
+
+.carousel__image {
+  aspect-ratio: 1/1;
+  width: 20rem;
+  height: 20rem;
+}

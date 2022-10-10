@@ -1,10 +1,17 @@
-import './App.css';
+import "./App.css";
+import React from 'react'
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/home/Home";
+import { ThemeProvider } from "@mui/material/styles";
+import theme from "./helper/theme";
 
 function App() {
   return (
-    <div className="App">
-     <h1>Macha/JuJu/Lianenko/Kamea's Project</h1>
-    </div>
+    <ThemeProvider theme={theme}>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </ThemeProvider>
   );
 }
 
