@@ -20,7 +20,7 @@
   width: 70rem;
 }
 
-p {
+.container-flex div p {
   font-weight: 700;
 }
 
@@ -30,17 +30,17 @@ p {
   border-radius: 1rem;
 }
 
-h1 {
+.container__flex div h1 {
   font-size: 4rem;
   margin: 1rem 0;
 }
 
-h2 {
+.container__flex div h2 {
   font-size: 3rem;
   margin: 0.8rem 0;
 }
 
-h3 {
+.container__flex div h3 {
   font-size: 2.7rem;
 }
 
