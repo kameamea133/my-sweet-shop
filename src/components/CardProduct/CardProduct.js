@@ -30,7 +30,7 @@ export default function CardProduct(){
       <Grid container spacing={4}>
 
           <Grid item xs={3}>
-            <Card sx={{width: 160}}>
+            <Card sx={{width: 180}}>
 
                 <CardMedia
                 component="img"
