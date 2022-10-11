@@ -5,12 +5,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus, faMinus, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { useContext } from "react";
 import PanierContext from "../context/contextPanier";
+import { colors } from "../helper/theme";
 
 import "../styles/panier.css";
 
 export default function Panier() {
 
-  const [products, setProducts] = useState([]);
+  const [listProducts, setListProducts] = useState([]);
   const [listPanier, setListPanier] = useState([]);
   const [montantTotal, setMontantTotal] = useState(0);
 
@@ -23,7 +24,7 @@ export default function Panier() {
       );
       const rawResponse = await response.json();
       if (response) {
-        setProducts(rawResponse.products);
+        setListProducts(rawResponse.products);
       }
     }
 
@@ -51,20 +52,21 @@ export default function Panier() {
         .filter((obj) => obj.quantite !== 0);
       setListPanier(replace);
       if (items.delete) {
-        const deleteProduct = products.filter((e) => e.title !== items.title);
-        setProducts(deleteProduct);
+        const deleteProduct = listProducts.filter((e) => e.title !== items.title);
+        setListProducts(deleteProduct);
       }
     } else {
       setListPanier([...listPanier, items]);
     }
   }
 
+console.log('panier',listPanier)
 
   return (
     <div className="panier-card-paiement">
       <div>
         <h2><span style={{color: '#5cc9f0'}}>Today's</span> Menu</h2>
-        {products.map((el, i) => (
+        {listProducts.map((el, i) => (
           <PanierCard
             title={el.title}
             price={el.price}
@@ -82,28 +84,29 @@ export default function Panier() {
 function PanierCard({ title, price, image, totalPrix }) {
   const [quantite, setQuantite] = useState(0);
   const [total, setTotal] = useState(0);
-  const [isSelected, setIsSelected] = useState(false);
   const [deleteProduct, setDeleteProduct] = useState(false);
 
   useEffect(() => {
     setTotal(price * quantite);
-    setIsSelected(true);
+    
   }, [quantite]);
 
   useEffect(() => {
-    if (isSelected) {
+   
       totalPrix({
         total: total,
         title: title,
         quantite: quantite,
         delete: deleteProduct,
-      });
-    }
+      });    
+    
   }, [total, deleteProduct]);
+  
 
   quantite < 0 && setQuantite(0);
 
   function majPanier(change) {
+   
     change === "+" && setQuantite(quantite + 1);
     change === "-" && setQuantite(quantite - 1);
     change === "delete" && setDeleteProduct(true);
@@ -136,11 +139,11 @@ function PanierCard({ title, price, image, totalPrix }) {
           />
         </div>
       </div>
-      <div>
-        <p>{price}€</p>
+      <div className="panier-prix-unitaire">
+        <p>{price} <span style={{color: colors.secondary}}>€</span></p>
       </div>
       <div className="panier-total">
-        <p>Total : {total}€</p>
+        <p>Total : {total} <span style={{color: colors.secondary}}>€</span></p>
         <div className="panier-icons">
           <FontAwesomeIcon
             icon={faXmark}
