@@ -5,6 +5,7 @@ import Section1 from "../../components/Section1";
 import Section2 from "../../components/Section2";
 import Header from "../../components/header";
 import PaiementCb from "../../components/paiementcb";
+import PaymentForm from "../../components/payment-form/PaymentForm.js";
 
 const DUMMY_IMAGES = [
   "https://assets.rpgsite.net/images/images/000/117/434/original/Harvestella_Strawberry-Shortcake.png",
@@ -23,6 +24,7 @@ export default function Home() {
       <Section2 />
       <PopularProduct />
       <PaiementCb />
+      <PaymentForm />
     </div>
   );
 }

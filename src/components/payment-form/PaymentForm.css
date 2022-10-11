@@ -1,0 +1,43 @@
+.payment__form {
+  display: block;
+
+  margin: auto;
+  width: 24rem;
+}
+
+.payment__form input {
+  display: block;
+  width: 100%;
+  margin: 1rem 0 0;
+  height: 3rem;
+  border-radius: 6px;
+  border-color: black;
+  font-size: large;
+}
+
+.error__message {
+  margin-top: 6px;
+  color: red;
+  font-weight: 400;
+}
+
+.payment__form input::placeholder {
+  color: grey;
+}
+
+.error__input {
+  border-color: red !important;
+}
+
+.payment__form__button {
+  display: block;
+  height: 4rem;
+  width: 8rem;
+  margin: auto;
+  margin-top: 2rem;
+}
+
+.is__valid {
+  background-color: blue;
+  color: white;
+}
