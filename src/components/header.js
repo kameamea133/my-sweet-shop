@@ -2,10 +2,16 @@ import React from 'react'
 import '../styles/header.css'
 import { Badge } from '@mui/material';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import { useContext } from "react";
+import PanierContext from "../context/contextPanier";
+
 
 
 function Header() {
 
+    const [state , dispatch] = useContext(PanierContext);
+
+    
 
   return (
     <div className="header">
@@ -26,7 +32,7 @@ function Header() {
         <div className='panier'>
             <div className='decor-panier'>
                 
-                    <Badge badgeContent={4} color="secondary" sx={{marginBottom: 1}} className='icone-panier'>
+                    <Badge badgeContent={state.totalQuantite} color="secondary" sx={{marginBottom: 1}} className='icone-panier'>
                         <ShoppingCartIcon fontSize="large"/>
                     </Badge>
                 
