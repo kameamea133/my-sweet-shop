@@ -8,8 +8,8 @@ import Header from "../../components/header";
 import Panier from "../../components/panier.js";
 import PanierContext from "../../context/contextPanier.js";
 import reducer from "../../context/panierReducer.js";
-import Reviews from "../../components/Reviews.js";
-import Footer from "../../components/Footer.js";
+import Reviews from "../../components/Reviews/Reviews.js";
+import Footer from "../../components/Footer/Footer.js";
 
 
 const DUMMY_IMAGES = [
