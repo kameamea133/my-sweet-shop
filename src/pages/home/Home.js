@@ -8,6 +8,8 @@ import Header from "../../components/header";
 import Panier from "../../components/panier.js";
 import PanierContext from "../../context/contextPanier.js";
 import reducer from "../../context/panierReducer.js";
+import Reviews from "../../components/Reviews.js";
+import Footer from "../../components/Footer.js";
 
 
 const DUMMY_IMAGES = [
@@ -33,7 +35,9 @@ export default function Home() {
         <OverviewCarousel imagesArray={DUMMY_IMAGES} />
         <Section1 />
         <Section2 />
-        <PopularProduct />        
+        <PopularProduct />  
+        <Reviews />
+        <Footer />      
         <Panier />
       </PanierContext.Provider>
       </div>
