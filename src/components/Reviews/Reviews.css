@@ -5,13 +5,13 @@
     background-image: url("../images/bg-reviews.svg") ;
     background-size:cover;
     padding : 30px 30px;
-    height : 250px;
+    height : 300px;
     
     
 }
 .title-reviews{
     color : #0E2E3B;
-    padding-top : 75px;
+    padding-top : 45px;
 }
 
 .white-title{
@@ -20,7 +20,7 @@
 
 .carroussel-reviews{
     width : 600px;
-    padding-top : 55px;
+    padding-top : 45px;
 }
 
 

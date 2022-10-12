@@ -13,7 +13,7 @@ export default function Footer(){
         
         <footer className="footer2-main">
             <div className="item item-logo">    
-                <h3>My Sw<span>ee</span>ts</h3> 
+                <h4>My Sw<span>ee</span>ts</h4> 
                 <p>All right reserved 2022 ©</p>
             </div>
 

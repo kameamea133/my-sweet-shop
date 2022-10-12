@@ -40,7 +40,7 @@ export default function Reviews(){
             <div className="carroussel-reviews">
             <Carousel 
                 height="180px" 
-                autoPlay={false} 
+                autoPlay={true} 
                 navButtonsAlwaysVisible={false} 
                 indicators={true}>
 
