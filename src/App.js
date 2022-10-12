@@ -8,9 +8,11 @@ import theme from "./helper/theme";
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
+      
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      
     </ThemeProvider>
 
   );
