@@ -1,7 +1,6 @@
 import React from "react";
 import "../styles/header.css";
 import { Badge } from "@mui/material";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
 function Header() {
   return (
@@ -31,7 +30,6 @@ function Header() {
             sx={{ marginBottom: 1 }}
             className="icone-panier"
           >
-            {/* <ShoppingCartIcon fontSize="medium" sx={{ color: "white" }} /> */}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
