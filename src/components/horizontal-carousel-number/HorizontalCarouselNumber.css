@@ -1,0 +1,22 @@
+.horizontal__carousel__number__index__layout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.horizontal__carousel__number__selected {
+  display: flex;
+  align-items: center;
+}
+
+.horizontal__carousel__number__not__selected {
+  display: flex;
+  justify-content: center;
+}
+
+.horizontal__carousel__number__selected svg {
+}
+
+.horizontal__carousel__number__not__selected svg {
+  width: 33%;
+}

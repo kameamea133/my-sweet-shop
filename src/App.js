@@ -1,16 +1,20 @@
-import './App.css';
+import "./App.css";
 import React from 'react'
-import Header from './components/header'
-import PaiementCb from './components/paiementcb';
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/home/Home";
+import { ThemeProvider } from "@mui/material/styles";
+import theme from "./helper/theme";
 
 function App() {
   return (
-    <div className="App">
-     
-     <Header />
-     <PaiementCb />
-     
-    </div>
+    <ThemeProvider theme={theme}>
+      
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      
+    </ThemeProvider>
+
   );
 }
 
