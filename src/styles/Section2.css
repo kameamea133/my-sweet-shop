@@ -45,8 +45,7 @@
   border-radius: 4px;
   cursor: pointer;
 }
-.section2__cream__button {
-  max-width: 200px;
+.section2__margin_auto {
   margin: 0 auto !important;
 }
 
@@ -153,11 +152,11 @@
   color: white;
   padding-left: 4%;
 }
-.cheskey div {
+.cheskey > div {
   position: relative;
   height: 64px;
 }
-.cheskey div h4 {
+.cheskey > div > h4 {
   position: absolute;
   display: inline-block;
   right: 16px;
@@ -167,13 +166,23 @@
   font-weight: 600;
   background: #36a6cc;
 }
-.cheskey h1 {
+.section2__cheskey__mainContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 70% !important;
+}
+.section2__cheskey__mainContainer > h1 {
   font-size: 4rem;
   font-weight: 600;
   font-family: "Roboto";
+  margin: 0;
 }
-.cheskey p {
+.section2__cheskey__mainContainer > p {
+  font-weight: 400;
+  max-width: 320px;
 }
 
-.cheskey__arrowBtn {
+.section2__arrowBtn {
+  width: 200px !important;
 }

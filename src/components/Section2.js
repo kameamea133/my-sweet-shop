@@ -1,6 +1,5 @@
 import React from "react";
 import "../styles/Section2.css";
-import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import ArrowButton from "../components/arrow-button/ArrowButton";
 
 const Section2 = () => {
@@ -18,7 +17,7 @@ const Section2 = () => {
           </div>
           <ArrowButton
             text="go to category"
-            className="section2__cream__button"
+            className="section2__arrowBtn section2__margin_auto"
           />
         </div>
         <div className="macarons">
@@ -32,7 +31,7 @@ const Section2 = () => {
         <div className="donuts">
           <h4>18 products</h4>
           <h1>Donuts</h1>
-          <ArrowButton text="go to category" />
+          <ArrowButton text="go to category" className="section2__arrowBtn" />
         </div>
         <div className="categories">
           <h1>categories</h1>
@@ -41,12 +40,14 @@ const Section2 = () => {
           <div>
             <h4>22 products</h4>
           </div>
-          <h1>Cheskey</h1>
-          <p>
-            Contrary to popular belief, Lorem Ipsum is not simply random text.
-            It has roots.
-          </p>
-          <ArrowButton text="go to category" className="cheskey__arrowBtn" />
+          <div className="section2__cheskey__mainContainer">
+            <h1>Cheskey</h1>
+            <p>
+              Contrary to popular belief, Lorem Ipsum is not simply random text.
+              It has roots.
+            </p>
+            <ArrowButton text="go to category" className="section2__arrowBtn" />
+          </div>
         </div>
       </div>
     </div>
