@@ -147,7 +147,8 @@
 .cheskey {
   grid-column: span 2 / -1;
   grid-row: span 2 / -1;
-  /* background: url("https://i.postimg.cc/wv6H5WNQ/Sans-titre-4.png") no-repeat; */
+  background: url("https://cheesecake.family/wp-content/uploads/2020/07/cheesecake-blueberry.png")
+    no-repeat center/contain;
   background-color: #5acaf0;
   color: white;
   padding-left: 4%;
