@@ -50,7 +50,7 @@ export default function Reviews() {
             height="180px"
             autoPlay={true}
             navButtonsAlwaysVisible={false}
-            indicators={false}
+            indicators={true}
           >
             {reviews.map((item, i) => {
               return <CardReview review={item} key={item.id} />;
