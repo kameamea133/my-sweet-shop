@@ -1,34 +1,35 @@
-.row-rewiews{
-    display:flex;
-    flex-direction: row;
-    justify-content:space-around;
-    background-image: url("../images/bg-reviews.svg") ;
-    background-size:cover;
-    padding : 30px 30px;
-    height : 250px;
-    
-    
+.row-rewiews {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-size: cover;
+  padding: 30px 30px;
+  height: 350px;
 }
-.title-reviews{
-    color : #0E2E3B;
-    padding-top : 75px;
-}
-
-.white-title{
-    color:white;
+.title-reviews {
+  color: #0e2e3b;
 }
 
-.carroussel-reviews{
-    width : 600px;
-    padding-top : 55px;
+.white-title {
+  color: white;
 }
 
+.carroussel-reviews {
+  width: 500px;
+}
 
 .color-reviews {
-    color:#5FD3FB;
+  color: #5fd3fb;
 }
 
-
-
-
-
+.row-reviews__background {
+  position: absolute;
+  bottom: 0;
+  background-color: #5fd3fb;
+  height: 170px;
+  width: 100%;
+  z-index: -1;
+}
