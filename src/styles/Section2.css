@@ -1,8 +1,14 @@
+.section2 {
+  background-color: #5acaf0;
+}
+
 .section2-mainContainer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-  height: 800px;
+  height: 700px;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .cream {
@@ -92,6 +98,7 @@
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
+  background-color: white;
 }
 
 .discounts h1 {
@@ -106,6 +113,7 @@
 .categories {
   grid-column: 2 / span 1;
   grid-row: 1 / span 1;
+  background-color: white;
 }
 .categories h1 {
   font-size: 3rem;
@@ -152,6 +160,7 @@
   background-color: #5acaf0;
   color: white;
   padding-left: 4%;
+  cursor: pointer;
 }
 .cheskey > div {
   position: relative;
