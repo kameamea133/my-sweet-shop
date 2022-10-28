@@ -1,243 +1,188 @@
-.section2 {
-    width: 100;
-    height: 600px;
-}
-
 .section2-mainContainer {
-     width: 100vw;
-     
-     display: grid; 
-  grid-template-columns: 1fr 1fr 1fr 1fr; 
-  grid-template-rows: 0.25fr 0.25fr 0.25fr 0.25fr 0.25fr; 
-  gap: 0px 0px; 
-  grid-template-areas: 
-    "cream categories discounts donuts"
-    "cream macarons discounts donuts"
-    "cream macarons discounts donuts"
-    "cream macarons cheskey cheskey"
-    "cream macarons cheskey cheskey"; 
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  height: 800px;
 }
 
 .cream {
-     grid-area: cream;
-     background: url("https://i.postimg.cc/gJ9BG8rf/Macarons-1.png") no-repeat center center/cover;
-     width: 100%;
-     height: 600px;
-
+  grid-column: 1 / span 1;
+  grid-row: 1 / -1;
+  background: url("https://pixy.org/src2/582/5823118.png") no-repeat center
+    center/cover;
+  background-position: center 120px;
+  background-color: #5acaf0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24px 0;
+  cursor: pointer;
 }
+
+.section2__cream__info {
+  max-width: 400px;
+  margin: 0 auto;
+  color: white;
+  padding: 0 8px;
+}
+.section2__cream__info h1 {
+  font-size: 3rem;
+  font-family: sans-serif;
+}
+.section2__cream__info p {
+  font-size: 0.8rem;
+  font-family: sans-serif;
+  font-weight: 300;
+}
+.section2__cream__info h4 {
+  font-size: 0.8rem;
+  font-family: sans-serif;
+  font-weight: 600;
+  margin-top: 10px;
+  padding: 8px;
+  background-color: #35a5cc;
+  display: inline-block;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.section2__margin_auto {
+  margin: 0 auto !important;
+}
+
+/* --------- */
 
 .macarons {
-     grid-area: macarons; 
-     background-color: #F1D95F;
-     width: 100%;
-     height: 468px;
-     background: url('https://i.postimg.cc/YqHQrjdJ/Macarons.png') no-repeat center center/cover;
+  position: relative;
+  grid-column: 2 / span 1;
+  grid-row: 2 / -1;
+  background: url("https://cdn11.bigcommerce.com/s-cz9zi6z6xn/images/stencil/1280w/carousel/16/MAE-French_Macarons-Online1800.png?c=1")
+    no-repeat center center/cover;
+  background-color: #f1d95f;
+  cursor: pointer;
 }
+.macarons h4 {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  background-color: #ffe87a;
+  max-width: 90px;
+  border-radius: 4px;
+  padding: 6px;
+}
+.macarons h2 {
+  writing-mode: vertical-lr;
+  margin-top: 120px;
+  font-size: 4rem;
+  color: white;
+  font-family: sans-serif;
+  padding-left: 10px;
+}
+
+/* ----------- */
 
 .discounts {
-     grid-area: discounts; 
-     background-color: #fff;
-     width: 100%;
-     height: 400px;
-     background: url('https://i.postimg.cc/RVNNpX6S/pic9.png') no-repeat;
-     background-size: 110%;
-     background-position: 205% -5%;
-     display: flex;
-     align-items: center;
-     justify-content: flex-end;
-}
-
-.donuts {
-     grid-area: donuts;
-     background: url('https://i.postimg.cc/vZP46s9v/Sans-titre-4.png') no-repeat center center/cover; 
-     background-size: 100%;
-     background-position: 10% 45%;
-     width: 100%;
-     height: 400px;
-     z-index: 2;
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-     padding-left: 20px;
-     position: relative;
-     right: 20px;
-}
-
-
-.categories {
-     grid-area: categories; 
-     background-color: #fff;
-}
-
-.cheskey {
-     grid-area: cheskey; 
-     background: url("https://i.postimg.cc/wv6H5WNQ/Sans-titre-4.png") no-repeat;
-     background-size: 100%;
-     background-position:  13% 1%;
-     height: 200px;
-     width: 100%;
+  grid-column: 3 / span 1;
+  grid-row: 1 / span 3;
+  background-color: rgb(121, 120, 154);
+  background: url("https://www.carvel.com/-/media/carvel/menu/ice-cream/soft-serve/car-740323-website-silo-crunchies-600x600-strawcone-2022-01.png?v=1&d=20220421T132220Z&h=600&w=600&la=en&hash=FC5241F4DE6F26BCB1A10411C93D95FF")
+    no-repeat center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
 }
 
 .discounts h1 {
-     font-size: 45px;
-     font-weight: 800;
-     font-family: 'Roboto';
-     color: black;
-     transform: rotate(-90deg);
-     width: 180px;
-     margin-bottom: -15px;
+  font-size: 2.4rem;
+  font-weight: 800;
+  font-family: sans-serif;
+  writing-mode: vertical-rl;
 }
 
+/* ------------ */
+
+.categories {
+  grid-column: 2 / span 1;
+  grid-row: 1 / span 1;
+}
+.categories h1 {
+  font-size: 3rem;
+  text-align: center;
+  font-weight: 800;
+  text-align: center;
+}
+
+/* ----------- */
+
+.donuts {
+  grid-column: span 1 / -1;
+  grid-row: 1 / span 3;
+  background: url("https://www.dunkindelivery.be/foodticket/images/6468/_cms1625647617_2-x12-donuts.png")
+    no-repeat center/cover;
+  background-color: #ed708e;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 10%;
+  color: white;
+  cursor: pointer;
+}
 .donuts h1 {
-     color: #fff;
-     font-size: 45px;
-     font-weight: 800;
-     font-family: 'Roboto';
+  font-size: 45px;
+  font-weight: 800;
+  font-family: "Roboto";
 }
 .donuts h4 {
-     background: #DC5475;
-     width: 90px;
-     padding: 5px 10px;
-     border-radius: 4px;
-     color: #fff;
-     font-weight: 500;
+  background: #dc5475;
+  padding: 6px;
+  border-radius: 4px;
+  font-weight: 500;
 }
 
-.donutsBtn {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background-color: #EC6D8B;
-      width: 150px;
-      border: 2px solid #fff;
-      height: 15px;
-      padding: 10px 2px 12px 20px;
-      border-radius: 50px;
+/* --------------- */
+
+.cheskey {
+  grid-column: span 2 / -1;
+  grid-row: span 2 / -1;
+  /* background: url("https://i.postimg.cc/wv6H5WNQ/Sans-titre-4.png") no-repeat; */
+  background-color: #5acaf0;
+  color: white;
+  padding-left: 4%;
+}
+.cheskey > div {
+  position: relative;
+  height: 64px;
+}
+.cheskey > div > h4 {
+  position: absolute;
+  display: inline-block;
+  right: 16px;
+  top: 16px;
+  padding: 6px;
+  border-radius: 4px;
+  font-weight: 600;
+  background: #36a6cc;
+}
+.section2__cheskey__mainContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 70% !important;
+}
+.section2__cheskey__mainContainer > h1 {
+  font-size: 4rem;
+  font-weight: 600;
+  font-family: "Roboto";
+  margin: 0;
+}
+.section2__cheskey__mainContainer > p {
+  font-weight: 400;
+  max-width: 320px;
 }
 
-.donuts p {
-     color: #fff;
-     font-weight: 500;
-}
-
-.cheskey h1 {
-     color: #fff;
-     font-size: 45px;
-     font-weight: 800;
-     font-family: 'Roboto';
-     height: 20px;
-     padding: 0px 0px 10px 60px;
-}
-
-.cheskey p {
-     color: #fff;
-     width: 290px;
-     height: 20px;
-     padding: 5px 0px 15px 60px;
-}
-
-.cheskeyBtn {
-    width: 190px;
-    height: 33px;
-    background-color: #4EC1E6;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-left: 60px;
-    border-radius: 50px;
-    border: 2px solid #fff;
-}
-
-.cheskeyBtn p {
-     width: 110px;
-     height: 5px;
-     padding: 25px 13px;
-     position:relative;
-     top: -8px;
-     left: 5px;
-
-}
-.cheskey h4 {
-     color: #fff;
-     position: relative;
-     width: 90px;
-     padding: 5px 10px;
-     border-radius: 4px;
-     color: #fff;
-     font-weight: 500;
-     background: #36A6CC;
-     float: right;
-     right: 240px;
-     top: -90px;
-}
-
-.macarons h4 {
-     position: relative;
-     background-color: #FFE87A;
-     width: 120px;
-     text-align: center;
-     border-radius: 4px;
-     float: right;
-     right: 15px;
-     padding: 4px 0px 6px 0px;
-     font-weight: 700;
-}
-
-.cream-block {
-     width: 70%;
-     
-     display: flex;
-     flex-direction: column;
-     align-items: start;
-     padding: 10px 100px;
-     justify-content: center;
-}
-.cream-block h1 {
-     color: #fff;
-     font-size: 45px;
-     font-weight: 600;
-     font-family: 'Roboto';
-     height: 20px;
-    
-}
-.cream-block p {
-     color: #fff;
-     font-weight: 500
-}
-
-.cream-block h4 {
-     color: #fff;
-     position: relative;
-     padding: 4px 0px 6px 0px;
-     background-color: #37A4D0;
-     width: 110px;
-     text-align: center;
-     border-radius: 4px;
-     top: -19px;
-     font-weight: 600;
-}
-.cream-btnBottom {
-     position: relative;
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
-     bottom: -290px;
-     left: 150px;
-     color: #fff;
-     background-color: #ED708E;
-     width: 150px;
-     height: 30px;
-     border-radius: 50px;
-     padding: 2px 0px 2px 20px;
-}
-
-.categories h1 {
-     font-size: 50px;
-     font-weight: 800;
-     text-align: center;
-     width: 250px;
-     position: relative;
-     left: 110px;
-     padding: 0;
-     margin: 0;
+.section2__arrowBtn {
+  width: 200px !important;
 }
