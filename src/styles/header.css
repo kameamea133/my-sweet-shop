@@ -1,6 +1,5 @@
 .header {
   display: flex;
-  width: 100vw;
   height: 110px;
   justify-content: space-around;
   align-items: center;
@@ -20,9 +19,11 @@
 .header__pink {
   height: 15px;
   width: 15px;
+  padding: 0 4px;
+  padding-bottom: 5px;
   background-color: #ed708e;
   color: white;
-  border-radius: 255px;
+  border-radius: 50%;
 }
 
 .titre {
