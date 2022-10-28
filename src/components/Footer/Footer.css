@@ -1,71 +1,89 @@
-.footer-main{
-    color:white;
-    background-color: #0E2E3B;
-    height : 200px;
-    font-family: Lato ;
-    font-size :12px;
-    padding-top : 30px;
-    flex-grow: 1;
-    
+.footer-main {
+  color: white;
+  background-color: #0e2e3b;
+  height: 200px;
+  font-family: Lato;
+  font-size: 12px;
+  padding-top: 30px;
+  flex-grow: 1;
 }
-.footer-col{
-    color:white;
-    background-color: #0E2E3B;
+.footer-col {
+  color: white;
+  background-color: #0e2e3b;
 }
-.liste-items-color{
-    color:#ed708e;
+.liste-items-color {
+  color: #ed708e;
 }
-.liste{
-    text-align:left; 
-    list-style-position: outside;
-    list-style-type: none;
-    padding: 0%;
-    column-count: 2;
-}
-
-.footer2-main{
-    color:white;
-    background-color: #0E2E3B;
-    display: flex;
-    flex-direction:row;
-    flex-wrap: wrap;
-    justify-content:center;
-    align-items: center;
-    height : 200px;
-    font-family: Lato ;
-    font-weight: 500;
-    font-size :12px;
-    padding-top : 20px;
+.liste {
+  text-align: left;
+  list-style-position: outside;
+  list-style-type: none;
+  padding: 0%;
+  column-count: 2;
 }
 
-.item{
-    height: 150px;
-    width:200px;
-    padding: 0 20px 0 20px;
-    line-height: 25px;
-
+.footer2-main {
+  color: white;
+  background-color: #0e2e3b;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  font-family: Lato;
+  font-weight: 500;
+  font-size: 12px;
+  padding-top: 20px;
 }
 
-.item-menu{
-    border-right: 1px solid grey;
-    padding-left: 30px;
+.footer2-main__logo h3 {
+  color: white;
+  font-size: 1.4rem;
+  width: auto;
+  padding: 12px 0;
+}
+.footer2-main__logo span {
+  background-color: #ed708e;
+  padding: 0 4px;
+  padding-bottom: 2px;
+  color: white;
+  border-radius: 30px;
+}
+.footer2-main__logo p {
+  font-size: 0.7rem;
+  font-weight: 100;
+  color: rgb(163, 163, 163);
 }
 
-.item-social{
-    text-align:right;
+.item {
+  height: 150px;
+  width: 200px;
+  padding: 0 20px 0 20px;
+  line-height: 25px;
 }
 
-.items a{
-    color:white;
-    text-decoration: none;
-}
-.items a:hover{
-    color:#ed708e;
+.item-menu {
+  border-right: 1px solid grey;
+  padding-left: 30px;
 }
 
- 
-.item-logo span {
-    background-color: #ed708e;
-    color: white;
-    border-radius: 30px;
+.item-social {
+  text-align: right;
+}
+.items {
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+.items:hover {
+  scale: 1.1;
+  color: #ed708e;
+}
+
+.footer__socialIcon {
+  transition: all 0.2s ease-out;
+}
+.footer__socialIcon:hover {
+  color: #ed708e;
+  scale: 1.1;
 }
