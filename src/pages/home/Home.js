@@ -1,11 +1,16 @@
 import React from "react";
+import { useReducer } from "react";
 import OverviewCarousel from "../../components/overview-carousel/OverviewCarousel.js";
 import PopularProduct from "../../components/popular-products/PopularProduct.jsx";
 import Section1 from "../../components/Section1";
 import Section2 from "../../components/Section2";
 import Header from "../../components/header";
-import PaiementCb from "../../components/paiementcb";
-import Filter from "../../components/Filter.js";
+import Panier from "../../components/panier.js";
+import PanierContext from "../../context/contextPanier.js";
+import reducer from "../../context/panierReducer.js";
+import Reviews from "../../components/Reviews/Reviews.js";
+import Footer from "../../components/Footer/Footer.js";
+
 const DUMMY_IMAGES = [
   "https://assets.rpgsite.net/images/images/000/117/434/original/Harvestella_Strawberry-Shortcake.png",
   "https://www.clipartmax.com/png/full/249-2498606_strawberry-pie-food-anime-cake-illustration-strawberry-cake-pixiv.png",
@@ -14,16 +19,23 @@ const DUMMY_IMAGES = [
   "https://cdn131.picsart.com/322349642117211.png",
 ];
 
+const initalState = [];
+
 export default function Home() {
+  const [state, dispatch] = useReducer(reducer, initalState);
+
   return (
     <div className="home">
-      <Header />
-      <OverviewCarousel imagesArray={DUMMY_IMAGES} />
-      <Section1 />
-      <Section2 />
-      <Filter />
-      <PopularProduct />
-      <PaiementCb />
+      <PanierContext.Provider value={[state, dispatch]}>
+        <Header />
+        <OverviewCarousel imagesArray={DUMMY_IMAGES} />
+        <Section1 />
+        <Section2 />
+        <PopularProduct />
+        <Reviews />
+        <Footer />
+        <Panier />
+      </PanierContext.Provider>
     </div>
   );
 }
