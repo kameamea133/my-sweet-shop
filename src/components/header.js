@@ -29,8 +29,8 @@ function Header() {
         </ul>
       </nav>
 
-      <div className="panier" onClick={() => navigate("/basket")}>
-        <div className="decor-panier">
+      <div className="panier">
+        <div className="decor-panier" onClick={() => navigate("/basket")}>
           <Badge
             badgeContent={4}
             color="secondary"
