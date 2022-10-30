@@ -4,7 +4,7 @@ import { colors } from "../../helper/theme";
 import { Button } from "@mui/material";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
-export default function ArrowButton({ text, className }) {
+export default function ArrowButton({ text, className, onClick }) {
   return (
     <Button
       className={`${className}`}
@@ -16,6 +16,7 @@ export default function ArrowButton({ text, className }) {
         borderRadius: "30px",
         padding: "4px 6px",
       }}
+      onClick={onClick && onClick}
     >
       <span className="text__btn">{text}</span>
       <div
