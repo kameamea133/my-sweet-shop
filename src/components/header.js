@@ -30,7 +30,7 @@ function Header() {
       </nav>
 
       <div className="panier">
-        <div className="decor-panier">
+        <div className="decor-panier" onClick={() => navigate("/basket")}>
           <Badge
             badgeContent={4}
             color="secondary"
