@@ -1,5 +1,5 @@
 import React from "react";
-import {useReducer} from 'react';
+import { useReducer } from "react";
 import OverviewCarousel from "../../components/overview-carousel/OverviewCarousel.js";
 import PopularProduct from "../../components/popular-products/PopularProduct.jsx";
 import Section1 from "../../components/Section1";
@@ -11,7 +11,6 @@ import reducer from "../../context/panierReducer.js";
 import Reviews from "../../components/Reviews/Reviews.js";
 import Footer from "../../components/Footer/Footer.js";
 
-
 const DUMMY_IMAGES = [
   "https://assets.rpgsite.net/images/images/000/117/434/original/Harvestella_Strawberry-Shortcake.png",
   "https://www.clipartmax.com/png/full/249-2498606_strawberry-pie-food-anime-cake-illustration-strawberry-cake-pixiv.png",
@@ -20,28 +19,23 @@ const DUMMY_IMAGES = [
   "https://cdn131.picsart.com/322349642117211.png",
 ];
 
-const initalState = []
-
+const initalState = [];
 
 export default function Home() {
+  const [state, dispatch] = useReducer(reducer, initalState);
 
-  const [state, dispatch] = useReducer(reducer, initalState)
-
-  
-  return (    
-      <div className="home">
+  return (
+    <div className="home">
       <PanierContext.Provider value={[state, dispatch]}>
         <Header />
         <OverviewCarousel imagesArray={DUMMY_IMAGES} />
         <Section1 />
         <Section2 />
-        <PopularProduct />  
+        <PopularProduct />
         <Reviews />
-        <Footer />      
+        <Footer />
         <Panier />
       </PanierContext.Provider>
-      </div>
-    
-
+    </div>
   );
 }

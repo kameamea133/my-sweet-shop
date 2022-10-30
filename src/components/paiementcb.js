@@ -8,14 +8,13 @@ import {
   faCcVisa,
 } from "@fortawesome/free-brands-svg-icons";
 
-function PaiementCb({total}) {
+function PaiementCb({ total }) {
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => console.log(data);
-  
 
   return (
     <div className="container-cb">
