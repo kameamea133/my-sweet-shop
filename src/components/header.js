@@ -29,7 +29,7 @@ function Header() {
         </ul>
       </nav>
 
-      <div className="panier">
+      <div className="panier" onClick={() => navigate("/basket")}>
         <div className="decor-panier">
           <Badge
             badgeContent={4}
