@@ -4,9 +4,14 @@ import { colors } from "../../helper/theme";
 import ArrowButton from "../arrow-button/ArrowButton";
 import VerticalCarouselNumber from "../vertical-carousel-number/VerticalCarouselNumber";
 import CarouselSlides from "../carousel-slides/CarouselSlides";
+import { useNavigate } from "react-router-dom";
 
 export default function OverviewCarousel({ imagesArray, interval = 2000 }) {
   const [slideNumber, setSlideNumber] = React.useState(0);
+  const navigate = useNavigate();
+  const handleClickProduction = () => {
+    navigate("/products");
+  };
 
   React.useEffect(() => {
     const intervalId = setInterval(
@@ -42,7 +47,11 @@ export default function OverviewCarousel({ imagesArray, interval = 2000 }) {
           <h3 style={{ color: colors.white }}>
             <span style={{ color: colors.third }}>macaroons, </span> cheskey
           </h3>
-          <ArrowButton text="our production" className="button" />
+          <ArrowButton
+            text="our production"
+            className="button"
+            onClick={handleClickProduction}
+          />
 
           {/* <img src={imagesArray[slideNumber]} alt="img" /> */}
         </div>
