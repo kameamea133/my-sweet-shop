@@ -1,13 +1,20 @@
 import React from "react";
 import "../styles/header.css";
 import { Badge } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 function Header() {
+  const navigate = useNavigate();
   return (
     <div className="header">
       <div className="titre">
         <div>
-          <h1 className="header__title">
+          <h1
+            className="header__title"
+            onClick={() => {
+              navigate("/");
+            }}
+          >
             <span className="header__white">Your </span> Sw
             <span className="header__pink">ee</span>ts
           </h1>
