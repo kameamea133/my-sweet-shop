@@ -1,6 +1,6 @@
 import "./App.css";
 import React from "react";
-import { Routes, Route, createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./pages/home/Home";
 import { ThemeProvider } from "@mui/material/styles";
 import theme from "./helper/theme";
@@ -20,9 +20,7 @@ const router = createBrowserRouter([
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
+      <RouterProvider router={router} />
     </ThemeProvider>
   );
 }
