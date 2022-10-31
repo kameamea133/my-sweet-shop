@@ -25,23 +25,9 @@ function Header() {
 
       <nav>
         <ul className="nav-item">
-          <li onClick={() => basketCtx.addProduct({ id: 45, name: "baba" })}>
-            Home
-          </li>
-          <li
-            onClick={() =>
-              basketCtx.removeUnitProduct({ id: 45, name: "baba" })
-            }
-          >
-            Catalogue
-          </li>
-          <li
-            onClick={() =>
-              basketCtx.removeTotallyProduct({ id: 45, name: "baba" })
-            }
-          >
-            About Us
-          </li>
+          <li>Home</li>
+          <li>Catalogue</li>
+          <li>About Us</li>
         </ul>
       </nav>
 
