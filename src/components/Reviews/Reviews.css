@@ -1,0 +1,35 @@
+.row-rewiews {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-size: cover;
+  padding: 30px 30px;
+  height: 350px;
+}
+.title-reviews {
+  color: #0e2e3b;
+}
+
+.white-title {
+  color: white;
+}
+
+.carroussel-reviews {
+  width: 500px;
+}
+
+.color-reviews {
+  color: #5fd3fb;
+}
+
+.row-reviews__background {
+  position: absolute;
+  bottom: 0;
+  background-color: #5fd3fb;
+  height: 170px;
+  width: 100%;
+  z-index: -1;
+}
