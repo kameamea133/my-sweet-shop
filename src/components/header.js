@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import "../styles/header.css";
 import { Badge } from "@mui/material";
 import { useNavigate } from "react-router-dom";
+import PanierContext from "../context/contextPanier";
 
 function Header() {
+  const basketCtx = useContext(PanierContext);
   const navigate = useNavigate();
   return (
     <div className="header">
@@ -23,16 +25,30 @@ function Header() {
 
       <nav>
         <ul className="nav-item">
-          <li onClick={() => console.log("Home")}>Home</li>
-          <li onClick={() => console.log("Catalogue")}>Catalogue</li>
-          <li onClick={() => console.log("About")}>About Us</li>
+          <li onClick={() => basketCtx.addProduct({ id: 45, name: "baba" })}>
+            Home
+          </li>
+          <li
+            onClick={() =>
+              basketCtx.removeUnitProduct({ id: 45, name: "baba" })
+            }
+          >
+            Catalogue
+          </li>
+          <li
+            onClick={() =>
+              basketCtx.removeTotallyProduct({ id: 45, name: "baba" })
+            }
+          >
+            About Us
+          </li>
         </ul>
       </nav>
 
       <div className="panier">
         <div className="decor-panier" onClick={() => navigate("/basket")}>
           <Badge
-            badgeContent={4}
+            badgeContent={basketCtx.numberOfProducts}
             color="secondary"
             sx={{ marginBottom: 1 }}
             className="icone-panier"
