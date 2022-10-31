@@ -6,9 +6,7 @@ import { ThemeProvider } from "@mui/material/styles";
 import theme from "./helper/theme";
 import Products from "./pages/products/Products";
 import Basket from "./pages/basket/Basket";
-import PanierContext from "./context/contextPanier";
-import reducer from "./context/panierReducer.js";
-import { useReducer } from "react";
+import { BasketContextProvider } from "./context/basket-context";
 
 const router = createBrowserRouter([
   {
@@ -26,13 +24,11 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  const initalState = [];
-  const [state, dispatch] = useReducer(reducer, initalState);
   return (
     <ThemeProvider theme={theme}>
-      <PanierContext.Provider value={[state, dispatch]}>
+      <BasketContextProvider>
         <RouterProvider router={router} />
-      </PanierContext.Provider>
+      </BasketContextProvider>
     </ThemeProvider>
   );
 }

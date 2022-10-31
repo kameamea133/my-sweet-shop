@@ -7,13 +7,24 @@ import PricingFilter from "../../components/PricingFilter";
 import ProductCard from "../../components/ProductCard";
 import FilterPagination from "../../components/FilterPagination";
 import SearchIcon from "@mui/icons-material/Search";
-import Data from "../../helper/FakeData";
 import Header from "../../components/header";
-
-const initialState = Data;
+import { useContext } from "react";
+import BasketContext from "../../context/basket-context";
 
 const Products = () => {
-  const [displayItems, setDisplayItems] = useState(initialState);
+  const [displayItems, setDisplayItems] = useState([]);
+  const basketCtx = useContext(BasketContext);
+
+  useEffect(() => {
+    const fetchs = async () => {
+      const res = await fetch(
+        "https://dummyjson.com/products/category/groceries"
+      );
+      const data = await res.json();
+      setDisplayItems(data.products);
+    };
+    fetchs();
+  }, []);
 
   return (
     <>
@@ -112,10 +123,11 @@ const Products = () => {
             {displayItems.map((item) => (
               <Grid position="relative" item xs={2} sm={4} md={3}>
                 <ProductCard
-                  displayItems={item.image}
+                  displayItems={item.thumbnail}
                   price={item.price}
                   category={item.category}
                   title={item.title}
+                  onClickAdd={() => basketCtx.addProduct(item)}
                 />
               </Grid>
             ))}
