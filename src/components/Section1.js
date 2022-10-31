@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import pic1 from "../images/pic1.png";
 import pic4 from "../images/pic4.png";
 import pic7 from "../images/pic7.png";
@@ -9,6 +10,10 @@ const DUMMY_IMAGE =
   "https://www.lesdessertsdegiulia.fr/wp-content/uploads/img-entremet-1-300x300.png";
 
 const Section1 = () => {
+  const navigate = useNavigate();
+  const handleClickProduction = () => {
+    navigate("/products");
+  };
   return (
     <div className="section1-mainContainer">
       <div className="section1-leftBox">
@@ -28,6 +33,7 @@ const Section1 = () => {
             <ArrowButton
               text="our production"
               className="section1__button_production"
+              onClick={handleClickProduction}
             />
           </div>
         </div>

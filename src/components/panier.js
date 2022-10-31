@@ -45,24 +45,22 @@ function PanierCard({ product, quantity }) {
         <p>{product.title}</p>
       </div>
       <div className="panier-quantite">
-        <div className="panier-icons">
-          <FontAwesomeIcon
-            icon={faMinus}
-            fontSize={20}
-            onClick={() => {
-              basketCtx.removeUnitProduct(product);
-            }}
-          />
+        <div
+          className="panier-icons"
+          onClick={() => {
+            basketCtx.removeUnitProduct(product);
+          }}
+        >
+          <FontAwesomeIcon icon={faMinus} fontSize={20} />
         </div>
         <p>{quantity}</p>
-        <div className="panier-icons">
-          <FontAwesomeIcon
-            icon={faPlus}
-            fontSize={20}
-            onClick={() => {
-              basketCtx.addProduct(product);
-            }}
-          />
+        <div
+          className="panier-icons"
+          onClick={() => {
+            basketCtx.addProduct(product);
+          }}
+        >
+          <FontAwesomeIcon icon={faPlus} fontSize={20} />
         </div>
       </div>
       <div className="panier-prix-unitaire">

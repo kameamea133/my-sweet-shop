@@ -11,6 +11,10 @@
   font-size: 2rem;
   color: black;
   cursor: pointer;
+  transition: transform 0.2s ease-out;
+}
+.header__title:hover {
+  transform: scale(1.05);
 }
 
 .header__white {
@@ -45,7 +49,7 @@
 }
 
 .nav-item li {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-family: sans-serif;
   cursor: pointer;
   transition: all 0.1s ease-out;
@@ -53,6 +57,7 @@
 
 .nav-item li:hover {
   scale: 1.1;
+  color: black;
 }
 
 .panier {
@@ -76,8 +81,8 @@
 }
 
 .icone-panier:hover {
-  transform: scale(1.1);
-  transition: transform 0.3s ease-in-out;
+  transform: scale(1.2);
+  transition: transform 0.2s ease-out;
 }
 
 .header__icon_panier {
