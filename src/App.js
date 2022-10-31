@@ -6,7 +6,7 @@ import { ThemeProvider } from "@mui/material/styles";
 import theme from "./helper/theme";
 import Products from "./pages/products/Products";
 import Basket from "./pages/basket/Basket";
-import { PanierContextProvider } from "./context/contextPanier";
+import { BasketContextProvider } from "./context/basket-context";
 
 const router = createBrowserRouter([
   {
@@ -26,9 +26,9 @@ const router = createBrowserRouter([
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <PanierContextProvider>
+      <BasketContextProvider>
         <RouterProvider router={router} />
-      </PanierContextProvider>
+      </BasketContextProvider>
     </ThemeProvider>
   );
 }

@@ -84,9 +84,9 @@ const reducer = (state, action) => {
   }
 };
 
-const PanierContext = createContext(initialValues);
+const BasketContext = createContext(initialValues);
 
-export const PanierContextProvider = (props) => {
+export const BasketContextProvider = (props) => {
   const [state, dispatch] = useReducer(reducer, {
     products: [],
     numberOfProducts: 0,
@@ -102,7 +102,7 @@ export const PanierContextProvider = (props) => {
   };
 
   return (
-    <PanierContext.Provider
+    <BasketContext.Provider
       value={{
         ...state,
         addProduct,
@@ -111,11 +111,11 @@ export const PanierContextProvider = (props) => {
       }}
     >
       {props.children}
-    </PanierContext.Provider>
+    </BasketContext.Provider>
   );
 };
 
-export default PanierContext;
+export default BasketContext;
 
 // ---------
 

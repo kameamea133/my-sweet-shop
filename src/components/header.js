@@ -2,10 +2,10 @@ import React, { useContext } from "react";
 import "../styles/header.css";
 import { Badge } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import PanierContext from "../context/contextPanier";
+import BasketContext from "../context/basket-context";
 
 function Header() {
-  const basketCtx = useContext(PanierContext);
+  const basketCtx = useContext(BasketContext);
   const navigate = useNavigate();
   return (
     <div className="header">
